@@ -1,0 +1,91 @@
+.RegisterPage {
+    width : 100vw;
+    height : 100vh;
+    overflow: hidden;
+    
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../images/register.jpg');
+    background-size: cover;
+
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RegisterPage a {
+    color : white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size : 1.75vh;
+    margin-top : 2vh;
+}
+
+h1 {
+    color : white;
+    margin-bottom : 5vh;
+    font-size : 7vh;
+    animation: appear 1s;
+}
+
+form {
+    width : 45vh;
+    height : 60vh;
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2vh;
+    background-color: whitesmoke;
+    animation: appear 1s;
+}
+
+form div {
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid black 1px;
+    outline: none;
+    font-size : 2vh;
+}
+
+form button {
+    width : 22vh;
+    height : 4.5vh;
+    background-color: rgb(21, 163, 21);
+    color : white;
+    cursor: pointer;
+    border-radius: 2vh;
+    border: none;
+    font-size : 2vh;
+}
+
+.loginForm {
+    padding-top : 6vh;
+    padding-bottom : 6vh;
+}
+
+.agree {
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.agree input {
+    margin-left : 2vh;
+}
+
+@keyframes appear {
+    from {
+        opacity : 0;
+    }
+
+    to { 
+        opacity : 1;
+    }
+}

@@ -1,0 +1,57 @@
+.HomePage {
+    width : 100vw;
+    height : 100vh;
+    display : flex;
+    flex-direction: column;
+    background-size: cover;
+    background: linear-gradient(rgba(0,0,0,0.76),rgba(0,0,0,0.76)), url('../images/home.jpg');
+    color : white;
+
+    padding : 10vh;
+}
+
+.HomeTitle {
+    opacity : 0;
+    font-size : 9vh;
+    animation-name: appear;
+    animation-duration: 1000ms;
+}
+
+.HomeSubtitle {
+    opacity : 0;
+    font-size : 6.5vh;
+    font-weight: 300;
+    margin-top : 5vh;
+    animation-name: appear;
+    animation-duration: 1000ms;
+}
+
+.HomeButton {
+    opacity : 0;
+    width : 26vh;
+    height : 6vh;
+    background-color: #309611;
+    font-size : 2.5vh;
+    cursor: pointer;
+    border-radius: 2vh;
+    color : white;
+    border: none;
+    margin-top : 5vh;
+    animation-name: appear;
+    animation-duration: 1000ms;
+}
+
+@keyframes appear {
+   from {
+    opacity : 0;
+   } 
+
+   to {
+    opacity : 1;
+   }
+}
+
+.visible {
+    opacity : 1;
+}
+
