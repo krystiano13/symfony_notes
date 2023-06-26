@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\NotesRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: NotesRepository::class)]
 class Notes
@@ -14,10 +15,19 @@ class Notes
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     private ?string $title = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     private ?string $content = null;
+
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    private ?string $creator = null;
 
     public function getId(): ?int
     {
@@ -47,4 +57,17 @@ class Notes
 
         return $this;
     }
+
+    public function getCreator(): ?string
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(string $creator): static
+    {
+        $this->creator = $creator;
+
+        return $this;
+    }
+
 }
